@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"encoding/josn"
 	"encoding/json"
 	"io/ioutil"
 	"log"
@@ -31,5 +30,5 @@ func AddBook(w http.ResponseWriter, r *http.Request) {
 	// Sending confirmation message
 	w.Header().Add("Content-Type", "application/json")
 	w.WriteHeader(http.StatusCreated)
-	json.NewEncoder(w).Encode("Created new books")
+	json.NewEncoder(w).Encode("Created new book")
 }
