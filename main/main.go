@@ -24,7 +24,9 @@ func main() {
 	router.HandleFunc("/books/{id}", handlers.GetBook).Methods(http.MethodGet)
 	// Fourth Endpoint
 	router.HandleFunc("/books/{id}", handlers.UpdateBook).Methods(http.MethodPut)
-	
+	// Fifth Endpoint
+	router.HandleFunc("/books/{id}", handlers.DeleteBook).Methods(http.MethodDelete)
+
 	log.Println("Api is running on port 4000")
 	http.ListenAndServe(":4000", router)
 }
