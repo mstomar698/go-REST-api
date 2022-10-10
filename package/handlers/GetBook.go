@@ -10,7 +10,7 @@ import (
 
 func GetBook(w http.ResponseWriter, r * http.Request) {
 	// Check dynamic parameter {id}
-	vars := mux.vars(r)
+	vars := mux.Vars(r)
 	id, _ := strconv.Atoi(vars["id"])
 
 	// check in all mocks for the {id}
