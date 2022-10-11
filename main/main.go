@@ -29,12 +29,12 @@ func main() {
 	// router.HandleFunc("/books/{id}", handlers.UpdateBook).Methods(http.MethodPut)
 	// // Fifth Endpoint
 	// router.HandleFunc("/books/{id}", handlers.DeleteBook).Methods(http.MethodDelete)
-		// Now new routea will be like this
-		router.HandleFunc("books", h.GetAllBooks).Methods(http.MethodGet)
-		router.HandleFunc("books/{id}", h.GetBook).Methods(http.MethodGet)
-		router.HandleFunc("books", h.AddBook).Methods(http.MethodPost)
-		router.HandleFunc("books/{id}", h.UpdateBook).Methods(http.MethodPut)
-		router.HandleFunc("books/{id}", h.DeleteBook).Methods(http.MethodDelete)
+	// Now new routea will be like this
+	router.HandleFunc("/books", h.GetAllBooks).Methods(http.MethodGet)
+	router.HandleFunc("/books/{id}", h.GetBook).Methods(http.MethodGet)
+	router.HandleFunc("/books", h.AddBook).Methods(http.MethodPost)
+	router.HandleFunc("/books/{id}", h.UpdateBook).Methods(http.MethodPut)
+	router.HandleFunc("/books/{id}", h.DeleteBook).Methods(http.MethodDelete)
 	log.Println("Api is running on port 4000")
 	http.ListenAndServe(":4000", router)
 }
