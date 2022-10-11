@@ -11,7 +11,8 @@ import (
 	"github.com/mstomar698/go-REST-api/package/models"
 )
 
-func UpdateBook(w http.ResponseWriter, r * http.Request) {
+// func UpdateBook(w http.ResponseWriter, r * http.Request) {
+func (h handler) UpdateBook(w http.ResponseWriter, r * http.Request) {
 	// Check dynamic parameter {id}
 	vars := mux.Vars(r)
 	id, _ := strconv.Atoi(vars["id"])

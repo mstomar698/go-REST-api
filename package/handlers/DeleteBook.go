@@ -9,7 +9,8 @@ import (
 	"github.com/mstomar698/go-REST-api/package/mocks"
 )
 
-func DeleteBook(w http.ResponseWriter, r *http.Request) {
+// func DeleteBook(w http.ResponseWriter, r *http.Request) {
+func (h handler) DeleteBook(w http.ResponseWriter, r *http.Request) {
 	// searching param
 	vars := mux.Vars(r)
 	id, _ := strconv.Atoi(vars["id"])
